@@ -1,0 +1,57 @@
+Your task is to implement a simulation of a change directory command. This command changes the current working directory to the specified one.
+
+The initial working directory is root i.e. /. You are given a list of cd commands commands.
+
+There are multiple options for command arguments.
+
+cd / - changes the working directory to the root directory.
+cd . - stays in the current directory.
+cd .. - moves the working directory one level up. In the root directory, cd .. does nothing.
+cd <subdirectory> - moves to the specified subdirectory within the current working directory.
+All specified directories exist. Return the absolute path from the root to the working directory after executing all cd commands in the given order. / should be used as separators.
+
+Example
+
+For
+commands = ["cd users",
+            "cd codesignal",
+            "cd ..",
+            "cd admin"]
+the output should be solution(commands) = "/users/admin".
+
+The absolute path is changing in the following way:
+/ -> /users -> /users/codesignal -> /users -> /users/admin.
+
+For
+commands = ["cd users",
+            "cd .",
+            "cd admin",
+            "cd /",
+            "cd volumes"]
+the output should be solution(commands) = "/volumes".
+
+The absolute path is changing this way:
+/ -> /users -> /users -> /users/admin -> / -> /volumes.
+
+Input/Output
+
+[execution time limit] 4 seconds (py3)
+
+[input] array.string commands
+
+An array of strings representing the list of cd commands in cd <option> format.
+All specified directories exist, and their names only consist of latin lowercase letters.
+
+Guaranteed constraints: 1 ≤ commands.length ≤ 1000.
+
+[output] string
+
+The current working directory after executing all cd commands.
+
+[Python 3] Syntax Tips
+
+# Prints help message to the console
+# Returns a string
+def helloWorld(name):
+    print("This prints to the console when you Run Tests")
+    return "Hello, " + name

@@ -1,0 +1,49 @@
+You are given two strings s and t of the same length. Your task is to check whether for each i, t[i] is the next alphabetic character of s[i], considering the alphabet is cyclic ('a' goes after 'z'). Return true if the condition satisfies, and false otherwise.
+
+For example, 'b' is the next character of 'a', and 'a' is the next character of 'z'. However, 's' is not the next character of 't', as well as 'w' is not the next character of 'u', and 'z' is not the next character of 'a'.
+
+Example
+
+For s = "abyz" and t = "bcza", the output should be solution(s, t) = true.
+
+Explanation:
+
+'b' is the next character of 'a'.
+'c' is the next character of 'b'.
+'z' is the next character of 'y'.
+'a' is the next character of 'z'.
+For s = "abyz" and t = "bczb", the output should be solution(s, t) = false.
+
+Explanation:
+
+Since the last character 'b' is not the next character of 'z'.
+Input/Output
+
+[execution time limit] 4 seconds (py3)
+
+[input] string s
+
+A string consisting of lowercase English letters.
+
+Guaranteed constraints:
+0 ≤ s.length ≤ 100.
+
+[input] string t
+
+A string consisting of lowercase English letters.
+
+Guaranteed constraints:
+0 ≤ t.length ≤ 100,
+ s.length == t.length .
+
+[output] boolean
+
+A boolean value as described above.
+
+[Python 3] Syntax Tips
+
+# Prints help message to the console
+# Returns a string
+def helloWorld(name):
+    print("This prints to the console when you Run Tests")
+    return "Hello, " + name
